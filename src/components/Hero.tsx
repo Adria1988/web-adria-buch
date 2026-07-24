@@ -12,7 +12,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
       {/* Background Image with Dark Gradient Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src={getAssetUrl('/images/Roman_thermopolium_reconstruction.jpg')} 
+          src={getAssetUrl('/images/Roman_thermopolium_reconstruction.webp')} 
           alt="Arqueología digital background"
           className="w-full h-full object-cover opacity-25 filter brightness-75 contrast-125"
           onError={(e) => handleImageError(e, '/images/thermopolium-reconstructed.webp')}

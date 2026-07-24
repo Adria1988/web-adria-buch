@@ -41,9 +41,9 @@ export const PROJECTS_DATA: Project[] = [
     chronology: "Siglo I d.C. (Destruido en el 79 d.C.)",
     location: "Regio V, Parque Arqueológico de Pompeya",
     description: "¿Cómo era salir a comer hace casi 2000 años? 🥖🍷 Desliza en el comparador para viajar en el tiempo a través de la historia y la Inteligencia Artificial.",
-    imageCurrent: "/images/thermopilum_actual.webp",
-    imageReconstructed: "/images/Roman_thermopolium_reconstruction.webp",
-    videoUrl: "/images/thermopolium_video.mp4",
+    imageCurrent: "public/images/thermopilum_actual.webp",
+    imageReconstructed: "public/images/Roman_thermopolium_reconstruction.webp",
+    videoUrl: "public/images/thermopolium_video.mp4",
     story: {
       headline: "¿Cómo era salir a comer hace casi 2000 años? 🥖🍷",
       guideText: "Desliza para viajar en el tiempo a través de la historia y la Inteligencia Artificial:",
@@ -95,8 +95,8 @@ export const PROJECTS_DATA: Project[] = [
     structures: "Muralla de piedra seca y habitaciones rectangulares adosadas.",
     description: "Reconstrucción tridimensional fotorrealista generada por IA del asentamiento ibérico de Céllecs. El proyecto simula la vida cotidiana y la estructura defensiva de la tribu de los layetanos.",
     fullAnalysis: "A través del procesamiento fotogramétrico del área ruinosa en la Serralada de Marina y el cruce con datos cerámicos del poblamiento layetano, los algoritmos de Inteligencia Artificial reconstruyeron la mampostería de piedra seca, la techumbre de ramas y arcilla, así como el entramado urbano original. Se identificaron zonas de almacenamiento con dolia y un espacio ritual central.",
-    imageCurrent: "/images/cellecs_actual.jpg",
-    imageReconstructed: "/images/cellecs_reconstructed.jpg",
+    imageCurrent: "/images/cellecs_actual.webp",
+    imageReconstructed: "/images/cellecs_reconstructed.webp",
     highlights: [
       { label: "FIDELIDAD FOTOGRAMÉTRICA", value: "100%", icon: "straighten" },
       { label: "CRONOLOGÍA ESTIMADA", value: "350 a.C.", icon: "history" },
