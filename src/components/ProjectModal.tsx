@@ -1,7 +1,7 @@
 import React from 'react';
 import { Project } from '../types';
 import { ComparisonSlider } from './ComparisonSlider';
-import { getAssetUrl } from '../utils/assets';
+import { getAssetUrl, handleImageError } from '../utils/assets';
 
 interface ProjectModalProps {
   project: Project | null;
@@ -219,12 +219,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose, on
                         src={getAssetUrl(project.imageCurrent)} 
                         alt={`${project.title} - Estado Actual`} 
                         className="w-full h-auto max-h-[750px] object-contain rounded-sm shadow-md"
-                        onError={(e) => {
-                          const target = e.currentTarget;
-                          if (target.src.endsWith('.webp')) {
-                            target.src = getAssetUrl(project.imageCurrent?.replace('.webp', '.jpg'));
-                          }
-                        }}
+                        onError={(e) => handleImageError(e)}
                       />
                     </div>
                     <p className="text-xs text-[#A8A29E] font-sans">
@@ -248,12 +243,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose, on
                         src={getAssetUrl(project.imageReconstructed)} 
                         alt={`${project.title} - Reconstrucción IA`} 
                         className="w-full h-auto max-h-[750px] object-contain rounded-sm shadow-md"
-                        onError={(e) => {
-                          const target = e.currentTarget;
-                          if (target.src.endsWith('.webp')) {
-                            target.src = getAssetUrl(project.imageReconstructed?.replace('.webp', '.jpg'));
-                          }
-                        }}
+                        onError={(e) => handleImageError(e)}
                       />
                     </div>
                     <p className="text-xs text-[#A8A29E] font-sans">

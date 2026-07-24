@@ -1,7 +1,7 @@
 import React from 'react';
 import { ARCHITECT_BIO } from '../data/projects';
 import { NavigationTab } from '../types';
-import { getAssetUrl } from '../utils/assets';
+import { getAssetUrl, handleImageError } from '../utils/assets';
 
 interface AboutSectionProps {
   onNavigate: (tab: NavigationTab) => void;
@@ -34,12 +34,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onNavigate, onOpenCo
           <div className="relative rounded-sm overflow-hidden border border-[#F7BD48]/40 bg-[#121212]">
             <img 
               src={getAssetUrl('/images/adria_buch_retrato.jpeg')} 
-              onError={(e) => {
-                const target = e.currentTarget;
-                if (target.src.includes('adria_buch_retrato.jpeg')) {
-                  target.src = getAssetUrl('/images/adria_buch.webp');
-                }
-              }}
+              onError={(e) => handleImageError(e, '/images/adria_buch.jpg')}
               alt="Adrià Buch - Programador & Arqueólogo"
               className="w-full h-[500px] object-cover object-top filter contrast-105 hover:contrast-110 transition-all duration-500"
             />

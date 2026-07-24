@@ -1,4 +1,5 @@
 /// <reference types="vite/client" />
+import React from 'react';
 
 export const getAssetUrl = (path: string | undefined): string => {
   if (!path) return '';
@@ -9,4 +10,29 @@ export const getAssetUrl = (path: string | undefined): string => {
   const cleanPath = path.startsWith('/') ? path.slice(1) : path;
   
   return `${cleanBase}${cleanPath}`;
+};
+
+export const handleImageError = (
+  e: React.SyntheticEvent<HTMLImageElement, Event>,
+  fallbackPath?: string
+) => {
+  const target = e.currentTarget;
+  // Prevent infinite error loops
+  const attempt = parseInt(target.dataset.errorAttempt || '0', 10);
+  if (attempt >= 2) return;
+  target.dataset.errorAttempt = String(attempt + 1);
+
+  if (fallbackPath) {
+    target.src = getAssetUrl(fallbackPath);
+    return;
+  }
+
+  const currentSrc = target.src;
+  if (currentSrc.endsWith('.webp')) {
+    target.src = currentSrc.replace(/\.webp$/, '.jpg');
+  } else if (currentSrc.endsWith('.jpeg')) {
+    target.src = currentSrc.replace(/\.jpeg$/, '.jpg');
+  } else if (currentSrc.endsWith('.jpg')) {
+    target.src = currentSrc.replace(/\.jpg$/, '.webp');
+  }
 };

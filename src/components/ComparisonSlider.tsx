@@ -1,5 +1,5 @@
 import React, { useState, useRef, useCallback } from 'react';
-import { getAssetUrl } from '../utils/assets';
+import { getAssetUrl, handleImageError } from '../utils/assets';
 
 interface ComparisonSliderProps {
   imageCurrent: string;
@@ -61,14 +61,7 @@ export const ComparisonSlider: React.FC<ComparisonSliderProps> = ({
         src={getAssetUrl(imageReconstructed)} 
         alt={labelReconstructed}
         className={`w-full h-full block pointer-events-none ${imageClassName}`}
-        onError={(e) => {
-          const target = e.currentTarget;
-          if (target.src.endsWith('.webp')) {
-            target.src = target.src.replace('.webp', '.jpg');
-          } else if (target.src.endsWith('.jpg')) {
-            target.src = target.src.replace('.jpg', '.jpeg');
-          }
-        }}
+        onError={(e) => handleImageError(e)}
       />
 
       {/* Foreground Image Clipped: Current / Ruins (Left side) */}
@@ -76,14 +69,7 @@ export const ComparisonSlider: React.FC<ComparisonSliderProps> = ({
         src={getAssetUrl(imageCurrent)} 
         alt={labelCurrent}
         className={`absolute inset-0 w-full h-full pointer-events-none ${imageClassName}`}
-        onError={(e) => {
-          const target = e.currentTarget;
-          if (target.src.endsWith('.webp')) {
-            target.src = target.src.replace('.webp', '.jpg');
-          } else if (target.src.endsWith('.jpg')) {
-            target.src = target.src.replace('.jpg', '.jpeg');
-          }
-        }}
+        onError={(e) => handleImageError(e)}
         style={{ 
           clipPath: `polygon(0 0, ${sliderPosition}% 0, ${sliderPosition}% 100%, 0 100%)`,
           WebkitClipPath: `polygon(0 0, ${sliderPosition}% 0, ${sliderPosition}% 100%, 0 100%)`
