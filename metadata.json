@@ -1,0 +1,8 @@
+{
+  "name": "Adrià Buch - Arqueología Digital",
+  "description": "Plataforma de reconstrucción arqueológica y preservación del patrimonio impulsada por Inteligencia Artificial de la mano de Adrià Buch.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
