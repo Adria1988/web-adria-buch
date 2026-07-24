@@ -37,7 +37,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentTab, onNavigate, onOpenCo
               ADRIÀ BUCH
             </span>
             <span className="block font-mono-code text-[10px] text-[#A8A29E] tracking-widest uppercase">
-              ARQUEOLOGÍA DIGITAL & AI
+              HISTORIA & IA
             </span>
           </div>
         </button>

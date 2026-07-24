@@ -40,7 +40,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
 
         {/* Main Title */}
         <h1 className="font-serif-caslon text-4xl sm:text-6xl md:text-7xl font-bold text-[#E4E2E1] tracking-tight leading-[1.1]">
-          Donde la Arqueología se encuentra con el <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F7BD48] via-[#e2a832] to-[#B8860B]">Futuro</span>.
+          Donde la Historia se encuentra con la <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F7BD48] via-[#e2a832] to-[#B8860B]">Inteligencia Artificial</span>.
         </h1>
 
         {/* Subtitle */}
