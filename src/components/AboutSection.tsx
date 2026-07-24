@@ -33,8 +33,8 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onNavigate, onOpenCo
           <div className="absolute -inset-1 rounded-sm bg-gradient-to-r from-[#F7BD48] to-[#B8860B] opacity-30 blur group-hover:opacity-60 transition-opacity" />
           <div className="relative rounded-sm overflow-hidden border border-[#F7BD48]/40 bg-[#121212]">
             <img 
-              src={getAssetUrl('/images/adria_buch_retrato.webp')} 
-              onError={(e) => handleImageError(e, '/images/adria_buch.webp')}
+              src={getAssetUrl('/images/adria_buch_retrato.jpeg')} 
+              onError={(e) => handleImageError(e, '/images/adria_buch.jpg')}
               alt="Adrià Buch - Programador & Arqueólogo"
               className="w-full h-[500px] object-cover object-top filter contrast-105 hover:contrast-110 transition-all duration-500"
             />

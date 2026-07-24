@@ -33,9 +33,11 @@ export const handleImageError = (
     return;
   }
 
-  if (currentSrc.endsWith('.jpeg')) {
-    target.src = currentSrc.replace(/\.jpeg$/, '.webp');
+  if (currentSrc.endsWith('.webp')) {
+    target.src = currentSrc.replace(/\.webp$/, '.jpg');
   } else if (currentSrc.endsWith('.jpg')) {
-    target.src = currentSrc.replace(/\.jpg$/, '.webp');
+    target.src = currentSrc.replace(/\.jpg$/, '.jpeg');
+  } else if (currentSrc.endsWith('.jpeg')) {
+    target.src = currentSrc.replace(/\.jpeg$/, '.jpg');
   }
 };
