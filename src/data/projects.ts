@@ -42,7 +42,7 @@ export const PROJECTS_DATA: Project[] = [
     location: "Regio V, Parque Arqueológico de Pompeya",
     description: "¿Cómo era salir a comer hace casi 2000 años? 🥖🍷 Desliza en el comparador para viajar en el tiempo a través de la historia y la Inteligencia Artificial.",
     imageCurrent: "/images/thermopilum_actual.webp",
-    imageReconstructed: "/images/Roman_thermopolium_reconstruction.webp",
+    imageReconstructed: "https://github.com/Adria1988/web-adria-buch/blob/main/public/images/Roman_thermopolium_reconstruction.webp",
     videoUrl: "/images/thermopolium_video.mp4",
     story: {
       headline: "¿Cómo era salir a comer hace casi 2000 años? 🥖🍷",
