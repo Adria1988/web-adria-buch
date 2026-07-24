@@ -41,9 +41,9 @@ export const PROJECTS_DATA: Project[] = [
     chronology: "Siglo I d.C. (Destruido en el 79 d.C.)",
     location: "Regio V, Parque Arqueológico de Pompeya",
     description: "¿Cómo era salir a comer hace casi 2000 años? 🥖🍷 Desliza en el comparador para viajar en el tiempo a través de la historia y la Inteligencia Artificial.",
-    imageCurrent: "public/images/thermopilum_actual.webp",
-    imageReconstructed: "public/images/Roman_thermopolium_reconstruction.webp",
-    videoUrl: "public/images/thermopolium_video.mp4",
+    imageCurrent: "/images/thermopilum_actual.webp",
+    imageReconstructed: "/images/Roman_thermopolium_reconstruction.webp",
+    videoUrl: "/images/thermopolium_video.mp4",
     story: {
       headline: "¿Cómo era salir a comer hace casi 2000 años? 🥖🍷",
       guideText: "Desliza para viajar en el tiempo a través de la historia y la Inteligencia Artificial:",
@@ -114,8 +114,8 @@ export const PROJECTS_DATA: Project[] = [
     location: "Archivo Histórico Fotográfico de Barcelona",
     description: "Recuperación de la memoria visual mediante redes neuronales especializadas en negativos degradados de placa de cristal y papel a la albúmina.",
     fullAnalysis: "Modelos difusos entrenados específicamente con emulsiones fotográficas decimonónicas logran eliminar arañazos, manchas de plata y desvanecimiento oxidativo sin perder el grano óptico original.",
-    imageCurrent: "/images/restauracion_actual.jpg",
-    imageReconstructed: "/images/restauracion_reconstructed.jpg",
+    imageCurrent: "/images/restauracion_actual.webp",
+    imageReconstructed: "/images/restauracion_reconstructed.webp",
     highlights: [
       { label: "RESOLUCIÓN RECUPERADA", value: "4K Native", icon: "high_quality" },
       { label: "TIEMPO PROCESO", value: "1.4s / placa", icon: "timer" }

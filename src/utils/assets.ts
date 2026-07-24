@@ -28,10 +28,13 @@ export const handleImageError = (
   }
 
   const currentSrc = target.src;
-  if (currentSrc.endsWith('.webp')) {
-    target.src = currentSrc.replace(/\.webp$/, '.jpg');
-  } else if (currentSrc.endsWith('.jpeg')) {
-    target.src = currentSrc.replace(/\.jpeg$/, '.jpg');
+  if (currentSrc.includes('/public/images/')) {
+    target.src = currentSrc.replace('/public/images/', '/images/');
+    return;
+  }
+
+  if (currentSrc.endsWith('.jpeg')) {
+    target.src = currentSrc.replace(/\.jpeg$/, '.webp');
   } else if (currentSrc.endsWith('.jpg')) {
     target.src = currentSrc.replace(/\.jpg$/, '.webp');
   }
