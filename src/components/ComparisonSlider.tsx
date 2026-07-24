@@ -1,4 +1,5 @@
 import React, { useState, useRef, useCallback } from 'react';
+import { getAssetUrl } from '../utils/assets';
 
 interface ComparisonSliderProps {
   imageCurrent: string;
@@ -57,7 +58,7 @@ export const ComparisonSlider: React.FC<ComparisonSliderProps> = ({
     >
       {/* Background Image: Reconstructed (Right side) */}
       <img 
-        src={imageReconstructed} 
+        src={getAssetUrl(imageReconstructed)} 
         alt={labelReconstructed}
         className={`w-full h-full block pointer-events-none ${imageClassName}`}
         onError={(e) => {
@@ -72,7 +73,7 @@ export const ComparisonSlider: React.FC<ComparisonSliderProps> = ({
 
       {/* Foreground Image Clipped: Current / Ruins (Left side) */}
       <img 
-        src={imageCurrent} 
+        src={getAssetUrl(imageCurrent)} 
         alt={labelCurrent}
         className={`absolute inset-0 w-full h-full pointer-events-none ${imageClassName}`}
         onError={(e) => {

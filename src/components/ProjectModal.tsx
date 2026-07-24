@@ -1,6 +1,7 @@
 import React from 'react';
 import { Project } from '../types';
 import { ComparisonSlider } from './ComparisonSlider';
+import { getAssetUrl } from '../utils/assets';
 
 interface ProjectModalProps {
   project: Project | null;
@@ -215,13 +216,13 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose, on
                     </div>
                     <div className="w-full bg-[#121212] rounded-sm overflow-hidden flex items-center justify-center p-2 border border-white/5">
                       <img 
-                        src={project.imageCurrent} 
+                        src={getAssetUrl(project.imageCurrent)} 
                         alt={`${project.title} - Estado Actual`} 
                         className="w-full h-auto max-h-[750px] object-contain rounded-sm shadow-md"
                         onError={(e) => {
                           const target = e.currentTarget;
                           if (target.src.endsWith('.webp')) {
-                            target.src = target.src.replace('.webp', '.jpg');
+                            target.src = getAssetUrl(project.imageCurrent?.replace('.webp', '.jpg'));
                           }
                         }}
                       />
@@ -244,13 +245,13 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose, on
                     </div>
                     <div className="w-full bg-[#121212] rounded-sm overflow-hidden flex items-center justify-center p-2 border border-white/5">
                       <img 
-                        src={project.imageReconstructed} 
+                        src={getAssetUrl(project.imageReconstructed)} 
                         alt={`${project.title} - Reconstrucción IA`} 
                         className="w-full h-auto max-h-[750px] object-contain rounded-sm shadow-md"
                         onError={(e) => {
                           const target = e.currentTarget;
                           if (target.src.endsWith('.webp')) {
-                            target.src = target.src.replace('.webp', '.jpg');
+                            target.src = getAssetUrl(project.imageReconstructed?.replace('.webp', '.jpg'));
                           }
                         }}
                       />
@@ -273,7 +274,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose, on
                     </div>
                     <div className="w-full bg-[#121212] rounded-sm overflow-hidden border border-[#F7BD48]/30 flex justify-center p-2">
                       <video 
-                        src={project.videoUrl} 
+                        src={getAssetUrl(project.videoUrl)} 
                         controls 
                         autoPlay 
                         loop 

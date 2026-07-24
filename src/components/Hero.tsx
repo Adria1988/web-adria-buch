@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavigationTab } from '../types';
+import { getAssetUrl } from '../utils/assets';
 
 interface HeroProps {
   onNavigate: (tab: NavigationTab) => void;
@@ -11,13 +12,13 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
       {/* Background Image with Dark Gradient Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="/images/thermopolium-reconstructed.webp" 
+          src={getAssetUrl('/images/thermopolium-reconstructed.webp')} 
           alt="Arqueología digital background"
           className="w-full h-full object-cover opacity-25 filter brightness-75 contrast-125"
           onError={(e) => {
             const target = e.currentTarget;
             if (target.src.endsWith('.webp')) {
-              target.src = '/images/Roman_thermopolium_reconstruction.jpg';
+              target.src = getAssetUrl('/images/Roman_thermopolium_reconstruction.jpg');
             }
           }}
         />

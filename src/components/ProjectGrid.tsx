@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { PROJECTS_DATA } from '../data/projects';
 import { Project } from '../types';
 import { ComparisonSlider } from './ComparisonSlider';
+import { getAssetUrl } from '../utils/assets';
 
 interface ProjectGridProps {
   onSelectProject: (project: Project) => void;
@@ -76,7 +77,7 @@ export const ProjectGrid: React.FC<ProjectGridProps> = ({ onSelectProject, onOpe
                   />
                 ) : (
                   <img 
-                    src={project.imageReconstructed || project.imageCurrent} 
+                    src={getAssetUrl(project.imageReconstructed || project.imageCurrent)} 
                     alt={project.title}
                     className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                     onError={(e) => {
